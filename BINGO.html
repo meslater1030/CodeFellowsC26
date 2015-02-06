@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    var number = prompt("Pick any number between 1 and 75");
+    //These arrays generate random, unique numbers
+    var arrayB = []
+      while(arrayB.length < 5){
+        var randomNumberB=Math.ceil(Math.random()*15)
+        var foundB=false;
+        for(var b=1; b<arrayB.length; b++){
+          if(arrayB[b]==randomNumberB){
+            foundB=true;break
+          }
+        }
+        if(!foundB){
+        arrayB[arrayB.length]=randomNumberB;
+        }
+      };
+    var arrayI = []
+      while(arrayI.length < 5){
+        var randomNumberI = Math.ceil((Math.random()*15)+15)
+        var foundI = false;
+        for(var i=1; i<arrayI.length; i++){
+          if(arrayI[i] == randomNumberI){
+          foundI=true;break
+          }
+        }
+        if(!foundI){
+        arrayI[arrayI.length]=randomNumberI;
+        }
+      };
+    var arrayN = []
+      while(arrayN.length < 4){
+        var randomNumberN=Math.ceil((Math.random()*15)+30)
+        var foundN=false;
+        for(var n=1;n<arrayN.length;n++){
+          if(arrayN[n]==randomNumberN){
+            foundN=true;break
+          }
+        }
+        if(!foundN){
+          arrayN[arrayN.length]=randomNumberN;
+        }
+      }; 
+    var arrayG = []
+      while(arrayG.length < 5){
+        var randomNumberG=Math.ceil((Math.random()*15)+45)
+        var foundG=false;
+        for(var g=1;g<arrayG.length;g++){
+          if(arrayG[g]==randomNumberG){
+            foundG=true;break
+          }
+        }
+        if(!foundG){
+          arrayG[arrayG.length]=randomNumberG;
+        }
+      };
+    var arrayO = []
+      while(arrayO.length < 5){
+        var randomNumberO=Math.ceil((Math.random()*15)+60)
+        var foundO=false;
+        for(var o=1;o<arrayO.length;o++){
+          if(arrayO[o]==randomNumberO){
+            foundO=true;break
+          }
+        }
+        if(!foundO){
+          arrayO[arrayO.length]=randomNumberO;
+        }
+      }; 
+
+//Here are all the numbers on your bingo card
+    var b1, b2, b3, b4, b5, i1, i2, i3, i4, i5, n1, n2, n4, n5, o1, o2, o3, o4, o5;
+    b1 = arrayB[0];
+    b2 = arrayB[1];
+    b3 = arrayB[2];
+    b4 = arrayB[3];
+    b5 = arrayB[4];
+    i1 = arrayI[0];
+    i2 = arrayI[1]; 
+    i3 = arrayI[2]; 
+    i4 = arrayI[3];
+    i5 = arrayI[4];
+    n1 = arrayN[0];
+    n2 = arrayN[1];
+    n4 = arrayN[2];
+    n5 = arrayN[3];
+    g1 = arrayG[0];
+    g2 = arrayG[1];
+    g3 = arrayG[2];
+    g4 = arrayG[3];
+    g5 = arrayG[4];
+    o1 = arrayO[0];
+    o2 = arrayO[1];
+    o3 = arrayO[2];
+    o4 = arrayO[3];
+    o5 = arrayO[4];
+
+//This lets the user keep guessing numbers until they get a bingo
+    while(!(500 == b1+b2+b3+b4+b5 || 500 == i1+i2+i3+i4+i5 || 400 == n1+n2+n4+n5 || 500 == g1+g2+g3+g4+g5 || 500 == o1+o2+o3+o4+o5 || 400 == b1+i2+g4+o5 || 400 == b5+i4+g2+o1)){
+      if(number==b1) {
+        b1=100
+      } else if(number==b2) {
+        b2=100
+      } else if(number==b3) {
+        b3=100
+      } else if(number==b4) {
+        b4=100
+      } else if(number==b5) {
+        b5=100
+      } else if(number==i1) {
+        i1=100
+      } else if(number==i2) {
+        i2=100
+      } else if(number==i3) {
+        i3=100
+      } else if(number==i4) {
+        i4=100
+      } else if(number==i5) {
+        i5=100
+      } else if(number==n1) {
+        n1=100
+      } else if(number==n2) {
+        n2=100
+      } else if(number==n4) {
+        n4=100
+      } else if(number==n5) {
+        n5=100
+      } else if(number==g1) {
+        g1=100
+      } else if(number==g2) {
+        g2=100
+      } else if(number==g3) {
+        g3=100
+      } else if(number==g4) {
+        g4=100
+      } else if(number==g5) {
+        g5=100
+      } else if(number==o1) {
+        o1=100
+      } else if(number==o2) {
+        o2=100
+      } else if(number==o3) {
+        o3=100
+      } else if(number==o4) {
+        o4=100
+      } else if(number==o5) {
+        o5=100
+      }; 
+//This makes sure the user is only asked for another number if a bingo hasn't happened yet.
+      if(!(500 == b1+b2+b3+b4+b5 || 500 == i1+i2+i3+i4+i5 || 400 == n1+n2+n4+n5 || 500 == g1+g2+g3+g4+g5 || 500 == o1+o2+o3+o4+o5 || 400 == b1+i2+g4+o5 || 400 == b5+i4+g2+o1)){
+      var number = prompt("Pick another number between 1 and 75");
+    };
+    };
+    alert("BINGO");  
+
+    </script>
+  <body>
+  </body>
+</html>
