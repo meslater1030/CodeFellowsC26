@@ -1,0 +1,33 @@
+<!DOCTPE html>
+<head>
+</head>
+<body>
+<script>
+var choice, guess, message, count=0;
+choice = Math.floor(Math.random() * 10);
+
+confirm("let's play a game.");
+alert("How many fingers am I holding up?");
+
+while(guess != choice) {
+  count++;
+  guess = prompt("Sorry, guess again. \nGuess number " = count + ":");
+};
+
+if (count <2) {
+    message = "Holy crap!  First try.  You might be psycho, er, psychic.";
+  } else if (count < 4) {
+    message = "Pretty good.  Only " + count + "guesses.";
+  } else if (count < 6) {
+    message = "It took you " + count + " tries.  You could use some practice.";
+  } else {
+    message = "Really!?! " + count + " tries?  That is weak";
+  };
+  
+
+alert(message);
+alert("Thanks for playing.  Refresh to play again.");
+
+
+</script>
+</body>
